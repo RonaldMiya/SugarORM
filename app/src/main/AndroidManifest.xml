@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="rmiya.com.sugarorm">
+
+    <application
+        android:name="com.orm.SugarApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="DATABASE"
+            android:value="sugarormapp.db" /> <!-- Nombre de la Base de Datos -->
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <!--
+      La version en que se creará,
+                                                                    si se decide agregar un nuevo campo se tendra que incrementar el valor
+        -->
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="rmiya.com.sugarorm.models" />
+        <!--
+      Ubicacion donde se encontrará el modelo,
+                                                                                                    importante se debe colocar la ubicacion don de esta almacenado el modelo
+        -->
+
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.RegisterActivity"></activity>
+    </application>
+
+</manifest>
